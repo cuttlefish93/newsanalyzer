@@ -1,13 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Сервис для анализа популярности новостей в различных категориях">
+  <meta name="author" content="Kamila Begimkulova">
+  <title>News Analyzer</title>
+  <link rel="shortcut icon" type="image/png" href="src/assets/images/favicon.png">
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
 <body>
-  
+  <div class="page">
+    <!-- header section starts -->
+    <header class="header page__header">
+      <!-- container for content -->
+      <div class="container">
+
+        <!-- header nav section -->
+        <section class="nav-section header__top">
+          <a href="./index.html" class="logo header__logo">
+            NewsAnalyzer
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a href="./index.html" target="_blank" class="header__nav-link">
+                  Главная
+                </a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="./pages/about/index.html" target="_blank" class="header__nav-link">
+                  О проекте
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- header search section -->
+        <section class="search-section header__bottom">
+          <h1 class="search-section__title">
+            Что в мире творится?
+          </h1>
+          <p class="search-section__subtitle">
+            Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+          </p>
+          <form class="search-section__form" name="search-form" novalidate>
+            <div class="search-section__form-row">
+              <input type="text" placeholder="Введите тему новости">
+              <button type="submit">Искать</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- main section starts -->
+    <main class="main page__main">
+      <!-- container for content -->
+      <div class="container">
+
+        <section class="author">
+          <div class="author__image-container">
+            <img src="src/assets/images/author-img.png" alt="Изображение автора" class="author__image">
+          </div>
+          <div class="author__description">
+            <h4 class="author__title">
+              Об авторе
+            </h4>
+            <p class="author__subtitle">
+              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями
+              разработки владеете.
+            </p>
+            <p class="author__subtitle">
+              Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным
+              заказчикам.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+    <!-- main section ends -->
+
+    <!-- footer section starts -->
+    <footer class="footer page__footer">
+      <!-- container for content -->
+      <div class="container">
+
+        <section class="footer-section">
+
+          <!-- copyright -->
+          <p class="footer-section__copyright">
+            &copy;2019 Supersite
+          </p>
+
+          <!-- footer navigation -->
+          <nav class="footer-section__nav">
+            <ul class="footer-section__nav-list">
+              <li class="footer-section__nav-item">
+                <a href="./index.html" target="_blank" class="footer-section__nav-link">
+                  Главная
+                </a>
+              </li>
+              <li class="footer-section__nav-item">
+                <a href="./pages/about/index.html" target="_blank" class="footer-section__nav-link">
+                  О проекте
+                </a>
+              </li>
+              <li class="footer-section__nav-item">
+                <a href="https://praktikum.yandex.ru/" target="_blank" class="footer-section__nav-link">
+                  Яндекс.Практикум
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- footer social icons -->
+          <ul class="footer-section__social">
+            <li class="footer-section__social-item">
+              <a href="https://github.com/camel-bb/" target="_blank" class="footer-section__social-link">
+                <img src="src/assets/images/github-icon.svg" alt="Профиль автора на гитхабе" class="footer-section__social-icon">
+              </a>
+            </li>
+            <li class="footer-section__social-item">
+              <a href="https://facebook.com/" target="_blank" class="footer-section__social-link">
+                <img src="src/assets/images/fb-icon.svg" alt="Профиль автора на фейсбуке" class="footer-section__social-icon">
+              </a>
+            </li>
+          </ul>
+
+        </section>
+      </div>
+
+    </footer>
+    <!-- footer section ends -->
+  </div>
+
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
