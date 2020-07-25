@@ -1,13 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Сервис для анализа популярности новостей в различных категориях">
+  <meta name="author" content="Kamila Begimkulova">
+  <title>News Analyzer - About</title>
+  <link rel="shortcut icon" type="image/png" href="src/assets/images/favicon.png">
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
+
 <body>
-  
+  <div class="page about-page">
+    <!-- header section -->
+    <header class="header about-page__header">
+      <div class="container">
+
+        <!-- header nav section -->
+        <section class="nav-section header__top">
+          <a href="./index.html" class="logo header__logo">
+            NewsAnalyzer
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a href="./index.html" target="_blank" class="header__nav-link">
+                  Главная
+                </a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="./about.html" target="_blank" class="header__nav-link">
+                  О проекте
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- header for clients section -->
+        <section class="benefits-for-clients header__bottom">
+          <h3 class="benefits-for-clients__title">
+            Клиентам
+          </h3>
+          <p class="benefits-for-clients__subtitle">
+            Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими
+            технологиями
+            владеет.
+          </p>
+          <p class="benefits-for-clients__subtitle">
+            Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять
+            новые
+            страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт
+            проще и
+            дешевле поддерживать.
+          </p>
+          <p class="benefits-for-clients__subtitle">
+            Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока
+            от сервера
+            приходит ответ. Это повышает удобство использования сервиса.
+          </p>
+          <p class="benefits-for-clients__subtitle">
+            При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке
+            сайтов. Код
+            оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если
+            посетители —
+            пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная
+            аудитория
+            возрастает.
+          </p>
+          <p class="benefits-for-clients__subtitle">
+            Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться
+            к этому
+            студенту.
+          </p>
+        </section>
+
+      </div>
+    </header>
+
+    <!-- main section -->
+    <main class="main about-page__main">
+      <div class="container">
+
+        <!-- technologies section -->
+        <section class="technologies">
+          <h4 class="technologies__title">
+            Используемые
+            технологии
+          </h4>
+          <ul class="technologies__list">
+            <li class="technologies__item">
+              <h5 class="technologies__item-title">HTML</h5>
+              <img src="src/assets/images/html5.png" alt="HTML логотип" class="technologies__item-img">
+            </li>
+            <li class="technologies__item">
+              <h5 class="technologies__item-title">CSS</h5>
+              <img src="src/assets/images/css3.png" alt="CSS логотип" class="technologies__item-img">
+            </li>
+            <li class="technologies__item">
+              <h5 class="technologies__item-title">Java Script</h5>
+              <img src="src/assets/images/js.png" alt="Java Script логотип" class="technologies__item-img">
+            </li>
+            <li class="technologies__item">
+              <h5 class="technologies__item-title">Webpack</h5>
+              <img src="src/assets/images/webpack.png" alt="Webpack логотип" class="technologies__item-img">
+            </li>
+          </ul>
+        </section>
+
+        <!-- about author -->
+        <section class="author">
+          <div class="author__image-container">
+            <img src="src/assets/images/author-img.png" alt="Изображение автора" class="author__image">
+          </div>
+          <div class="author__description">
+            <h4 class="author__title">
+              Об авторе
+            </h4>
+            <p class="author__subtitle">
+              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими
+              технологиями
+              разработки владеете.
+            </p>
+            <p class="author__subtitle">
+              Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+              потенциальным
+              заказчикам.
+            </p>
+          </div>
+      </div>
+      </section>
+
+      <section class="commits-section">
+        <div class="container">
+
+          <!-- github commits data section-->
+          <div class="dynamic-data-header commits-section__header">
+            <h3 class="dynamic-data__title commits-section__title">
+              История коммитов из GitHub
+            </h3>
+            <a href="#" class="dynamic-data__link commits-section__link">
+              Открыть в Github
+            </a>
+          </div>
+          
+        </div>
+
+        <!-- github commits slider -->
+        <div class="swiper-container commits-slider">
+          <ul class="swiper-wrapper commits-slider__list">
+
+            <template>
+              <li class="commit-slider-card swiper-slide">
+                <a href="#" class="commit-slider-card__link">
+                  <p class="commit-slider-card__create-date"></p>
+                  <div class="commit-slider-card__author">
+                    <div class="commit-slider-card__image-box"><img src="" alt="" class="commit-slider-card__img"></div>
+                    <div class="commit-slider-card__about-author-box">
+                      <p class="commit-slider-card__author-name"></p>
+                      <p class="commit-slider-card__author-email"></p>
+                    </div>
+                  </div>
+                  <p class="commit-slider-card__commit-text"></p>
+                </a>
+              </li>
+            </template>
+
+          </ul>
+
+          <div class="swiper-pagination"></div>
+
+          <button class="swiper-button-prev"></button>
+          <button class="swiper-button-next"></button>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- footer section starts -->
+    <footer class="footer about-page__footer">
+      <div class="container">
+
+        <section class="footer-section">
+
+          <!-- copyright -->
+          <p class="footer-section__copyright">
+            &copy;2019 Supersite
+          </p>
+
+          <!-- footer navigation -->
+          <nav class="footer-section__nav">
+            <ul class="footer-section__nav-list">
+              <li class="footer-section__nav-item">
+                <a href="./index.html" target="_blank" class="footer-section__nav-link">
+                  Главная
+                </a>
+              </li>
+              <li class="footer-section__nav-item">
+                <a href="./pages/about/index.html" target="_blank" class="footer-section__nav-link">
+                  О проекте
+                </a>
+              </li>
+              <li class="footer-section__nav-item">
+                <a href="https://praktikum.yandex.ru/" target="_blank" class="footer-section__nav-link">
+                  Яндекс.Практикум
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- footer social icons -->
+          <ul class="footer-section__social">
+            <li class="footer-section__social-item">
+              <a href="https://github.com/camel-bb/" target="_blank" class="footer-section__social-link">
+                <img src="src/assets/images/github-icon.svg" alt="Профиль автора на гитхабе"
+                  class="footer-section__social-icon">
+              </a>
+            </li>
+            <li class="footer-section__social-item">
+              <a href="https://facebook.com/" target="_blank" class="footer-section__social-link">
+                <img src="src/assets/images/fb-icon.svg" alt="Профиль автора на фейсбуке"
+                  class="footer-section__social-icon">
+              </a>
+            </li>
+          </ul>
+
+        </section>
+      </div>
+
+    </footer>
+  </div>
+
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
+
 </html>

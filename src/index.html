@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
 <body>
-  <div class="page">
+  <div class="page main-page">
     <!-- header section -->
-    <header class="header page__header">
+    <header class="header main-page__header">
       <div class="container">
 
         <!-- header nav section -->
@@ -28,7 +28,7 @@
                 </a>
               </li>
               <li class="header__nav-list-item">
-                <a href="./pages/about/index.html" target="_blank" class="header__nav-link">
+                <a href="./about.html" target="_blank" class="header__nav-link">
                   О проекте
                 </a>
               </li>
@@ -56,13 +56,15 @@
     </header>
 
     <!-- main section  -->
-    <main class="main page__main">
+    <main class="main main-page__main">
       <div class="container">
 
         <!-- preloader -->
         <section class="preloader"> 
-          <i class="preloader__circle"></i>
-          <p class="preloader__state">Идет поиск новостей...</p>
+          <svg class="preloader__svg">
+            <circle class="preloader__circle" />
+          </svg>
+          <p class="preloader__state-text">Идет поиск новостей...</p>
         </section>
 
         <!-- failed search -->
@@ -81,11 +83,11 @@
         <section class="search-results">
 
           <!-- search results header -->
-          <div class="search-results__header">
-            <h3 class="search-results__title">
+          <div class="dynamic-data-header search-results__header">
+            <h3 class="dynamic-data__title search-results__title">
               Результаты поиска
             </h3>
-            <a href="./pages/analytics/index.html" class="search-results__analytics-link">
+            <a href="./pages/analytics/index.html" class="dynamic-data__link search-results__analytics-link">
               Посмотреть аналитику
             </a>
           </div>
@@ -93,7 +95,7 @@
           <!-- search results bottom -->
           <div class="search-results__bottom">
             <ul class="news-list">
-              
+
               <!-- template for news card -->
               <template>
                 <li class="news-card">
@@ -138,7 +140,7 @@
     </main>
 
     <!-- footer section starts -->
-    <footer class="footer page__footer">
+    <footer class="footer main-page__footer">
       <div class="container">
 
         <section class="footer-section">
