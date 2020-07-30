@@ -1,0 +1,10 @@
+.keyword-analytics__percentage-nums {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-left: 86px;
+  color: #b6bcbf;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}

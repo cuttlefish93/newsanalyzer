@@ -1,0 +1,11 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+@media (max-width: 768px) {
+  .nav__list {
+    height: 64px;
+  }
+}

@@ -1,0 +1,12 @@
+.search-results__add-news-btn {
+  margin: 64px auto 0;
+  background-color: #fff;
+  display: block;
+  font-weight: 500;
+  border-radius: 80px;
+  padding: 20px 84px;
+}
+
+.search-results__add-news-btn:hover {
+  opacity: .9;
+}

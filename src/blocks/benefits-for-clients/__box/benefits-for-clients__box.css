@@ -1,0 +1,15 @@
+.benefits-for-clients__box {
+  max-width: 66%;
+}
+
+@media (max-width: 1024px) {
+  .benefits-for-clients__box {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-for-clients__box {
+    max-width: 100%;
+  }
+}

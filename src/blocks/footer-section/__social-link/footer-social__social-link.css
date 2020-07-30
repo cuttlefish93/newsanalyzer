@@ -1,0 +1,4 @@
+.footer-section__social-link:hover .footer-section__social-icon path {
+    fill: #b6bcbf;
+    transition: .3s linear;
+  }

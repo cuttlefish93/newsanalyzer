@@ -1,0 +1,6 @@
+.news-card__description {
+  margin-bottom: 18px;
+  max-height: 110px;
+  overflow: hidden;
+  line-height: 22px;
+}

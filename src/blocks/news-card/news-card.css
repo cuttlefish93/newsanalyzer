@@ -1,0 +1,25 @@
+@import url(./__link/news-card__link.css);
+@import url(./__img/news-card__img.css);
+@import url(./__about/news-card__about.css);
+@import url(./__create-date/news-card__create-date.css);
+@import url(./__name/news-card__name.css);
+@import url(./__description/news-card__description.css);
+@import url(./__source/news-card__source.css);
+
+.news-card {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  color: #1A1B22;
+  background-color: #fff;
+  border-radius: 16px;
+  transition: .2s linear;
+}
+
+.news-card:hover {
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  transition: .2s linear;
+  transform: scale(1.005);
+}

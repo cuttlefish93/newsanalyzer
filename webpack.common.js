@@ -4,17 +4,6 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
 
-  resolve: {
-    alias: {
-      scripts: path.resolve(__dirname, 'src/js'),
-      images: path.resolve(__dirname, 'src/assets/images'),
-      fonts: path.resolve(__dirname, 'src/vendor/fonts'),
-      aboutpage: path.resolve(__dirname, 'src/pages/about'),
-      analyticspage: path.resolve(__dirname, 'src/pages/analytics'),
-      src: path.resolve(__dirname, 'src')
-    }
-  },
-
   entry: {
     index: './src/index.js',
     about: './src/pages/about/index.js',

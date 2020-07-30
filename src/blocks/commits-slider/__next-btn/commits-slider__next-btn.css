@@ -1,0 +1,7 @@
+.commits-slider__next-btn {
+  background-image: url(./../../../assets/images/slider-next-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  right: 24px;
+  top: 124px;
+}

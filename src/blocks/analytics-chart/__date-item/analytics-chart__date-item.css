@@ -1,0 +1,7 @@
+.analytics-chart__date-item {
+  height: 24px;
+}
+
+.analytics-chart__date-item + .analytics-chart__date-item {
+  margin-top: 40px;
+}

@@ -1,0 +1,26 @@
+.nav__link_active_common {
+    color: #1A1B22;
+  }
+
+  .nav__link_active_common::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    top: 46px;
+    left: 0;
+    cursor: default;
+  }
+
+  @media (max-width: 768px) {
+    .nav__link_active_common::after {
+      top: 38px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .nav__link_active_common::after {
+      top: 33px;
+    }
+  }

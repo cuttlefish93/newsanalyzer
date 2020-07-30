@@ -1,0 +1,9 @@
+.keyword-analytics__text {
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.keyword-analytics__text + .keyword-analytics__text {
+  margin-left: 30px;
+}

@@ -1,0 +1,10 @@
+.benefits-for-clients__title {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .benefits-for-clients__title {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+}

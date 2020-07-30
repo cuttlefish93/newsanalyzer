@@ -1,0 +1,19 @@
+.main-page__header {
+  background-image: url(./../../../assets/images/main-bg-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .main-page__header {
+    background-image: url(./../../../assets/images/main-bg-img-ipad-mini.jpg);
+  }
+}
+
+@media (max-width: 450px) {
+  .main-page__header {
+    background-image: url(./../../../assets/images/main-bg-img-iphone-se.jpg);
+  }
+}

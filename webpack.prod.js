@@ -18,7 +18,7 @@ module.exports = merge(common, {
   },
 
   output: {
-    filename: '[name].[contenthash].js',
+    filename: 'js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
   },
 
@@ -42,7 +42,7 @@ module.exports = merge(common, {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
+      filename: 'styles/[name].[contenthash].css'
     }),
     new OptimizeCssAssetsWebpackPlugin({
       assetNameRegExp: /\.css$/g,

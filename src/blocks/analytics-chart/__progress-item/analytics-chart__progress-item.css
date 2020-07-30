@@ -1,0 +1,8 @@
+.analytics-chart__progress-item {
+  position: relative;
+  height: 24px;
+}
+
+.analytics-chart__progress-item + .analytics-chart__progress-item {
+  margin-top: 40px;
+}

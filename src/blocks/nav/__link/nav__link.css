@@ -1,0 +1,13 @@
+@import url(./_active/_common/nav__link_active_common.css);
+@import url(./_active/_main/nav__link_active_main.css);
+
+.nav__link {
+  position: relative;
+  display: block;
+  transition: .2s ease;
+}
+
+.nav__link:hover {
+  color: #1A1B22;
+  transition: .4s linear;
+}

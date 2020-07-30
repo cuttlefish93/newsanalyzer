@@ -1,0 +1,5 @@
+.commits-slider__list {
+  overflow: hidden;
+  height: 288px;
+  position: relative;
+}

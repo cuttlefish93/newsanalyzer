@@ -1,0 +1,4 @@
+.nav-section__nav-link:hover {
+    color: #fff;
+    transition: .2s linear;
+  }

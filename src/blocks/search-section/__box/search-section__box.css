@@ -1,0 +1,30 @@
+.search-section__box {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .search-section__box {
+    max-width: 58%;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-section__box {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-section__box {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-section__box {
+    max-width: 100%;
+  }
+}
+
+

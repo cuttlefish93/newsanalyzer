@@ -11,27 +11,29 @@
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
 </head>
 
-<body>
-  <div class="page main-page">
+<body class="page">
+
+  <div class="main-page">
+
     <!-- header section -->
     <header class="header main-page__header">
 
       <!-- header nav section -->
-      <section class="header__top">
+      <section class="header__top main-page__header-top">
         <div class="container">
           <div class="nav-section">
-            <a href="./index.html" class="link logo">
+            <a href="./index.html" target="_blank" class="link logo nav-section__logo">
               NewsAnalyzer
             </a>
-            <nav class="nav">
+            <nav class="nav nav-section__nav">
               <ul class="list nav__list">
                 <li class="nav__list-item">
-                  <a href="./index.html" target="_blank" class="link nav__link nav__link_active_main">
+                  <a href="./index.html" target="_blank" class="link nav__link nav-section__nav-link nav__link_active_main">
                     Главная
                   </a>
                 </li>
                 <li class="nav__list-item">
-                  <a href="./about.html" target="_blank" class="link nav__link">
+                  <a href="./about.html" target="_blank" class="link nav__link nav-section__nav-link">
                     О проекте
                   </a>
                 </li>
@@ -51,9 +53,9 @@
             <p class="subtitle search-section__subtitle">
               Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
             </p>
-            <form class="search-section__form" name="search-form" novalidate>
+            <form class="search-section__form" name="search-form">
               <div class="search-section__form-row">
-                <input type="text" class="input search-section__name-input" placeholder="Введите тему новости">
+                <input type="text" class="input search-section__name-input" placeholder="Введите тему новости" required minlength="2">
                 <button type="submit" class="button search-section__search-btn">Искать</button>
               </div>
             </form>
@@ -64,14 +66,14 @@
     </header>
 
     <!-- main section  -->
-    <main class="main main-page__main">
+    <main class="main main-page__main" style="display: none;">
 
       <!-- preloader -->
       <section class="preloader">
         <div class="container">
           <div class="preloader__box">
             <svg class="preloader__svg">
-              <circle class="preloader__circle" />
+              <circle cx="37px" cy="37px" r="34px" class="preloader__circle" />
             </svg>
             <p class="subtitle preloader__state-text">Идет поиск новостей...</p>
           </div>
@@ -99,23 +101,23 @@
 
         <!-- search results header -->
         <div class="container">
-          <div class="dynamic-data-header search-results__header">
-            <h3 class="title dynamic-data__title search-results__title">
+
+          <!-- dynamic data header -->
+          <div class="dynamic-data">
+            <h3 class="title dynamic-data__title">
               Результаты поиска
             </h3>
-            <a href="./pages/analytics/index.html" class="link dynamic-data__link search-results__analytics-link">
+            <a href="./analytics.html" target="_blank" class="link dynamic-data__link">
               Посмотреть аналитику
             </a>
           </div>
 
-
-          <!-- search results bottom -->
-          <div class="search-results__bottom">
+            <!-- news container section -->
             <ul class="list news-list">
 
               <!-- template for news card -->
               <li class="news-card">
-                <a href="#" class="link news-card__link">
+                <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
                   <img src="src/assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
                   <div class="news-card__about">
                     <p class="subtitle news-card__create-date">2 августа, 2019</p>
@@ -131,7 +133,7 @@
               </li>
 
               <li class="news-card">
-                <a href="#" class="link news-card__link">
+                <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
                   <img src="src/assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
                   <div class="news-card__about">
                     <p class="subtitle news-card__create-date">2 августа, 2019</p>
@@ -147,7 +149,7 @@
               </li>
 
               <li class="news-card">
-                <a href="#" class="link news-card__link">
+                <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
                   <img src="src/assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
                   <div class="news-card__about">
                     <p class="subtitle news-card__create-date">2 августа, 2019</p>
@@ -163,7 +165,7 @@
               </li>
 
               <li class="news-card">
-                <a href="#" class="link news-card__link">
+                <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
                   <img src="src/assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
                   <div class="news-card__about">
                     <p class="subtitle news-card__create-date">2 августа, 2019</p>
@@ -179,7 +181,7 @@
               </li>
 
               <li class="news-card">
-                <a href="#" class="link news-card__link">
+                <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
                   <img src="src/assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
                   <div class="news-card__about">
                     <p class="subtitle news-card__create-date">2 августа, 2019</p>
@@ -195,7 +197,7 @@
               </li>
 
               <li class="news-card">
-                <a href="#" class="link news-card__link">
+                <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
                   <img src="src/assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
                   <div class="news-card__about">
                     <p class="subtitle news-card__create-date">2 августа, 2019</p>
@@ -209,12 +211,11 @@
                   </div>
                 </a>
               </li>
-
-
 
             </ul>
+
             <button type="button" class="button search-results__add-news-btn">Показать еще</button>
-          </div>
+          
         </div>
       </section>
 
@@ -222,9 +223,10 @@
       <section class="author">
         <div class="container">
           <div class="author__box">
-            <div class="author__image-container">
+            <picture class="author__image-container">
+              <source srcset="src/assets/images/author-img-mobile.png" media="(max-width: 1024px)" class="author__image">
               <img src="src/assets/images/author-img.png" alt="Изображение автора" class="author__image">
-            </div>
+            </picture>
             <div class="author__description">
               <h4 class="title author__title">
                 Об авторе
@@ -247,11 +249,11 @@
     </main>
 
     <!-- footer section starts -->
-    <footer class="footer main-page__footer">
+    <footer class="footer main-page__footer" style="display: none;">
 
       <section class="footer-section">
         <div class="container">
-          <div class="footer__section-box">
+          <div class="footer-section__box">
 
             <!-- copyright -->
             <p class="subtitle footer-section__copyright">
@@ -267,7 +269,7 @@
                   </a>
                 </li>
                 <li class="nav__list-item footer-section__nav-item">
-                  <a href="./pages/about/index.html" target="_blank" class="link nav__link footer-section__nav-link">
+                  <a href="./about.html" target="_blank" class="link nav__link footer-section__nav-link">
                     О проекте
                   </a>
                 </li>
@@ -288,7 +290,8 @@
                     fill="none" xmlns:v="https://vecta.io/nano">
                     <path fill-rule="evenodd"
                       d="M12 1.895A10.11 10.11 0 0 0 1.895 12c0 4.467 2.897 8.25 6.91 9.6.502.093.69-.217.69-.5l-.012-1.718C6.67 20 6.076 18.03 6.076 18.03c-.46-1.166-1.123-1.476-1.123-1.476-.918-.626.068-.614.068-.614 1.01.074 1.55 1.042 1.55 1.042.9 1.545 2.363 1.098 2.94.837.093-.65.354-1.098.64-1.352-2.246-.254-4.603-1.123-4.603-4.994 0-1.104.39-2.004 1.042-2.71-.105-.254-.453-1.284.1-2.674 0 0 .85-.273 2.78 1.036.806-.223 1.67-.335 2.53-.34.856.006 1.724.118 2.53.34 1.93-1.31 2.78-1.036 2.78-1.036.552 1.4.205 2.42.1 2.674.645.707 1.036 1.607 1.036 2.71 0 3.883-2.363 4.733-4.615 4.987.36.3.69.93.69 1.874l-.012 2.773c0 .273.18.583.695.484 4.014-1.34 6.904-5.124 6.904-9.584A10.11 10.11 0 0 0 12 1.895z"
-                      fill="#000" /></svg>
+                      fill="#000" />
+                    </svg>
                 </a>
               </li>
               <li class="footer-section__social-item">
