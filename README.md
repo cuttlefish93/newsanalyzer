@@ -7,7 +7,7 @@ Service for analyzing the popularity of news for a week by various categories an
 * `each element of the list leads to the source`
 * `here is a graph of requests for this topic for the last seven days, broken down by day`
 
-##Technologies:
+## Technologies:
 ``` bash
 HTML5
 CSS3
@@ -18,7 +18,7 @@ Webpack
 Babel
 ```
 
-##Build setup:
+## Build setup:
 ``` bash
 # Download repository
 git clone https://github.com/camel-bb/newsanalyzer.git
