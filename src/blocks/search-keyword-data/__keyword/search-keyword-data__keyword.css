@@ -1,15 +1,15 @@
 .search-keyword-data__keyword {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
-    .search-keyword-data__keyword {
-      font-size: 32px;
-    }
+  .search-keyword-data__keyword {
+    font-size: 32px;
   }
-  
-  @media (max-width: 450px) {
-    .search-keyword-data__keyword {
-      font-size: 30px;
-    }
+}
+
+@media (max-width: 450px) {
+  .search-keyword-data__keyword {
+    font-size: 30px;
   }
+}

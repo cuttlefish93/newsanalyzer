@@ -1,5 +1,5 @@
 .search-section__title {
-  margin-bottom: 32px;
+  margin-bottom: 22px;
   color: #fff;
   font-size: 60px;
 }
@@ -8,6 +8,14 @@
   .search-section__title {
     font-size: 36px;
     margin-bottom: 16px;
+    max-width: 80%;
   }
 }
 
+@media (max-width: 500px) {
+  .search-section__title {
+    font-size: 36px;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+}

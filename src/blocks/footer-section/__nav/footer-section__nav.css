@@ -1,3 +1,19 @@
 .footer-section__nav {
-  color: #1A1B22;
+  color: #1a1b22;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .footer-section__nav {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-section__nav {
+    order: 1;
+    margin-bottom: 40px;
+  }
 }

@@ -10,6 +10,19 @@
   font-weight: 400;
   font-size: 18px;
   box-sizing: border-box;
-  color: #1A1B22;
+  color: #1a1b22;
   padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .author {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .author {
+    padding: 30px 0;
+  }
 }

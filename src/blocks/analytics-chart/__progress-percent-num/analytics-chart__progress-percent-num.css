@@ -8,3 +8,10 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
+
+@media (max-width: 450px) {
+  .analytics-chart__progress-percent-num {
+    font-size: 10px;
+    left: 4px;
+  }
+}

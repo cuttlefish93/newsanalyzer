@@ -6,13 +6,13 @@
 }
 
 .breadcrumbs__item + .breadcrumbs__item {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .breadcrumbs__item + .breadcrumbs__item::before {
-  content: '/';
+  content: "/";
   color: #b6bcbf;
   position: absolute;
   top: 0;
-  left: -10px;
+  left: -15px;
 }

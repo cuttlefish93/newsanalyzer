@@ -6,9 +6,18 @@ module.exports = merge(common, {
 
   mode: 'development',
 
+  devServer: {
+    overlay: {
+      warnings: true,
+      errors: true
+    },
+    port: 8081,
+    contentBase: path.resolve(__dirname, 'dist')
+  },
+
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
 
   module: {

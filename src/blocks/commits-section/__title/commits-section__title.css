@@ -1,0 +1,11 @@
+@media (max-width: 900px) {
+  .commits-section__title {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .commits-section__title {
+    max-width: 336px;
+  }
+}

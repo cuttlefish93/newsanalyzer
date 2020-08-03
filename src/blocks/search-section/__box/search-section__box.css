@@ -5,7 +5,7 @@
 
 @media (max-width: 768px) {
   .search-section__box {
-    max-width: 58%;
+    max-width: 63%;
   }
 }
 
@@ -26,5 +26,3 @@
     max-width: 100%;
   }
 }
-
-

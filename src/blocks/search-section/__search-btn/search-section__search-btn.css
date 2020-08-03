@@ -1,6 +1,7 @@
 .search-section__search-btn {
-  background-color: #2F71E5;
-  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  background-color: #2f71e5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, .2);
+  border: 4px solid transparent;
   border-radius: 100px;
   font-weight: 500;
   color: #fff;
@@ -13,18 +14,23 @@
 }
 
 .search-section__search-btn:hover {
-  background-color: #347EFF;
-  
+  background-color: #347eff;
 }
 
 .search-section__search-btn:active {
-  background-color: #2A65CC;
+  background-color: #2a65cc;
+}
+
+.search-section__search-btn:focus {
+  outline: none;
+  border: 4px solid rgba(255, 255, 0, .6);
 }
 
 @media (max-width: 768px) {
   .search-section__search-btn {
     width: 160px;
     height: 56px;
+    right: -24px;
   }
 }
 

@@ -1,5 +1,6 @@
 @import url(./__date-list/analytics-chart__date-list.css);
 @import url(./__date-item/analytics-chart__date-item.css);
+@import url(./__progress-list/analytics-chart__progress-list.css);
 @import url(./__progress-item/analytics-chart__progress-item.css);
 @import url(./__progress-percent-num/analytics-chart__progress-percent-num.css);
 @import url(./__svg/analytics-chart__svg.css);
@@ -13,5 +14,5 @@
   font-weight: 400;
   font-size: 18px;
   box-sizing: border-box;
-  color: #1A1B22;
+  color: #1a1b22;
 }

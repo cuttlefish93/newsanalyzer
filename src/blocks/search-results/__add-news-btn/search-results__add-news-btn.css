@@ -5,8 +5,27 @@
   font-weight: 500;
   border-radius: 80px;
   padding: 20px 84px;
+  border: 4px solid transparent;
 }
 
 .search-results__add-news-btn:hover {
   opacity: .9;
+}
+
+.search-results__add-news-btn:focus {
+  outline: none;
+  border: 4px solid rgba(255, 255, 0, .6);
+}
+
+@media (max-width: 800px) {
+  .search-results__add-news-btn {
+    margin-top: 20px;
+    padding: 20px 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-results__add-news-btn {
+    width: 100%;
+  }
 }

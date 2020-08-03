@@ -1,3 +1,12 @@
 .analytics-chart__date-list {
-  padding-right: 38px;
+  padding-right: 30px;
+  width: 86px;
+  margin-right: 18px;
+}
+
+@media (max-width: 450px) {
+  .analytics-chart__date-list {
+    margin-right: 0;
+    width: 82px;
+  }
 }

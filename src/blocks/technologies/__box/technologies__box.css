@@ -1,4 +1,15 @@
 .technologies__box {
   display: flex;
-  justify-content: space-between;
+}
+
+@media (max-width: 1170px) {
+  .technologies__box {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1024px) {
+  .technologies__box {
+    flex-direction: column;
+  }
 }

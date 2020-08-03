@@ -1,3 +1,9 @@
 .commits-slider__list-item {
-  margin-right: 16px;
+  transition: .2s linear;
+}
+
+.commits-slider__list-item:hover {
+  box-shadow: inset 6px 6px 257px -57px rgba(0,0,0,.31);
+  transition: .2s linear;
+  transform: scale(1.005);
 }

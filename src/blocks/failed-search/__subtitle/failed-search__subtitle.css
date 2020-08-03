@@ -1,4 +1,10 @@
 .failed-search__subtitle {
-  color: #B6BCBF;
+  color: #b6bcbf;
   line-height: 24px;
+}
+
+@media (max-width: 450px) {
+  .failed-search__subtitle {
+    font-size: 16px;
+  }
 }

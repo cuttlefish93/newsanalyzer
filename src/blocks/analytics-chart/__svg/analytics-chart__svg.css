@@ -1,32 +1,32 @@
 .analytics-chart__svg {
-  height: 24px; 
-  fill: #2F71E5;
+  height: 24px;
+  fill: #2f71e5;
 }
 
 #mon {
-  width: calc(1144 * 15 / 100)px;
+  width: 15%;
 }
 
 #tue {
-  width: calc(1144 * 18 / 100)px;
+  width: 18%;
 }
 
 #wed {
-  width: calc(1144 * 11 / 100)px;
+  width: 11%;
 }
 
 #thu {
-  width: calc(1144 * 39 / 100)px;
+  width: 39%;
 }
 
 #fri {
-  width: calc(1144 * 45 / 100)px;
+  width: 45%;
 }
 
 #sat {
-  width: calc(1144 * 73 / 100)px;
+  width: 73%;
 }
 
 #sun {
-  width: calc(1144 * 34 / 100)px;
+  width: 34%;
 }

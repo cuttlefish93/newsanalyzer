@@ -1,6 +1,6 @@
 @import url(./__box/preloader__box.css);
 @import url(./__svg/preloader__svg.css);
-@import url(./__circle/preloader__circle.css);
+@import url(./__rect/preloader__rect.css);
 @import url(./__state-text/preloader__state-text.css);
 
 .preloader {
@@ -11,5 +11,12 @@
   box-sizing: border-box;
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
+}
+
+@media (max-width: 1024px) {
+  .preloader {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }

@@ -1,13 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
   entry: {
     index: './src/index.js',
-    about: './src/pages/about/index.js',
-    analytics: './src/pages/analytics/index.js'
+    about: './src/pages/about/about.js',
+    analytics: './src/pages/analytics/analytics.js',
   },
 
   module: {
@@ -21,36 +22,12 @@ module.exports = {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
         options: {
-          name: 'fonts/[name].[ext]'
+          name: 'assets/fonts/[name].[ext]'
         }
       },
       {
         test: /\.(png|jpe?g|svg|webp|gif)$/,
-        use: [
-          'file-loader?name=./assets/images/[name].[ext]&esModule=false',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75
-              }
-            }
-          }
-        ]
+        use: ['file-loader?name=assets/images/[name].[ext]&esModule=false']
       },
     ]
   },
@@ -64,19 +41,24 @@ module.exports = {
       inject: false
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/about/index.html',
+      template: './src/pages/about/about.html',
       filename: 'about.html',
       chunks: ['about'],
       hash: true,
       inject: false
     }),
     new HtmlWebpackPlugin({
-      template: './src/pages/analytics/index.html',
+      template: './src/pages/analytics/analytics.html',
       filename: 'analytics.html',
       chunks: ['analytics'],
       hash: true,
       inject: false
     }),
     new WebpackMd5Hash(),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/assets/images', to: 'assets/images' }
+      ]
+    })
   ]
 }

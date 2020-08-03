@@ -1,0 +1,15 @@
+.commits-section__header {
+  margin-bottom: 64px;
+}
+
+@media (max-width: 800px) {
+  .commits-section__header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commits-section__header {
+    margin-bottom: 16px;
+  }
+}

@@ -1,4 +1,15 @@
 .news-card__name {
   font-size: 26px;
   margin-bottom: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 800px) {
+  .news-card__name {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
 }

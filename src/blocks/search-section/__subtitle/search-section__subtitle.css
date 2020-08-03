@@ -5,20 +5,20 @@
 
 @media (max-width: 768px) {
   .search-section__subtitle {
-   margin-bottom: 24px;
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 500px) {
   .search-section__subtitle {
-   font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 450px) {
   .search-section__subtitle {
-   font-size: 20px;
-   line-height: 26px;
-   margin-bottom: 64px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 64px;
   }
 }

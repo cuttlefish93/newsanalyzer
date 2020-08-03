@@ -1,8 +1,2 @@
 @import url(./_active/commits-slider__pagination-icon_active.css);
 
-.commits-slider__pagination-icon {
-  width: 8px;
-  height: 8px;
-  background-color: #D1D2D6;
-  border-radius: 50%;
-}

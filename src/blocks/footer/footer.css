@@ -4,5 +4,6 @@
   font-weight: 400;
   font-size: 18px;
   box-sizing: border-box;
-  color: #1A1B22;
+  color: #1a1b22;
+  flex-shrink: 0;
 }

@@ -5,3 +5,22 @@
 .technologies__item + .technologies__item {
   margin-left: 40px;
 }
+
+@media (max-width: 1024px) {
+  .technologies__item + .technologies__item {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .technologies__item {
+    width: 40%;
+    margin-bottom: 42px;
+  }
+  .technologies__item:nth-child(3) {
+    margin-bottom: 0;
+  }
+  .technologies__item:nth-child(4) {
+    margin-bottom: 0;
+  }
+}

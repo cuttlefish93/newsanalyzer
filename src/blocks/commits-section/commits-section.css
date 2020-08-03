@@ -1,3 +1,5 @@
+@import url(./__header/commits-section__header.css);
+@import url(./__title/commits-section__title.css);
 @import url(./__link/commits-section__link.css);
 
 .commits-section {
@@ -6,8 +8,24 @@
   font-weight: 400;
   font-size: 18px;
   box-sizing: border-box;
-  color: #1A1B22;
+  color: #1a1b22;
   padding-top: 72px;
   padding-bottom: 136px;
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .commits-section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commits-section {
+    padding-top: 30px;
+    padding-bottom: 155px;
+  }
 }

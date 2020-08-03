@@ -27,7 +27,12 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           {
             loader: 'css-loader',
             options: {
@@ -36,13 +41,36 @@ module.exports = merge(common, {
           },
           'postcss-loader'
         ]
+      },
+      {
+        test: /\.(png|jpe?g|svg|webp|gif)$/,
+        loader: 'image-webpack-loader',
+        options: {
+          mozjpeg: {
+            progressive: true,
+            quality: 65
+          },
+          optipng: {
+            enabled: false,
+          },
+          pngquant: {
+            quality: [0.65, 0.90],
+            speed: 4
+          },
+          gifsicle: {
+            interlaced: false,
+          },
+          webp: {
+            quality: 75
+          }
+        }
       }
     ]
   },
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css'
+      filename: 'styles/[name].[contenthash].css',
     }),
     new OptimizeCssAssetsWebpackPlugin({
       assetNameRegExp: /\.css$/g,

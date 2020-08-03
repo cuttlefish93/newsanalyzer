@@ -1,2 +1,6 @@
 @import url(./__header/main-page__header.css);
 @import url(./__header-top/main-page__header-top.css);
+
+.main-page {
+  flex: 1 0 auto;
+}

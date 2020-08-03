@@ -14,3 +14,9 @@
   right: 0;
   top: 3px;
 }
+
+@media (max-width: 650px) {
+  .dynamic-data__link::after {
+    top: 4px;
+  }
+}

@@ -1,17 +1,6 @@
 .preloader__svg {
-  width: 74px;
-  height: 74px;
-  animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  width: 93px;
+  height: 90px;
+  display: inline-block;
+  transform: rotate(180deg);
 }

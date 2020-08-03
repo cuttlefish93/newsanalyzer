@@ -2,4 +2,11 @@
   display: flex;
   justify-content: space-between;
   padding-top: 13px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .technologies__list {
+    padding-top: 0;
+  }
 }

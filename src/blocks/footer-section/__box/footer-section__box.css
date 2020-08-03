@@ -1,6 +1,21 @@
 .footer-section__box {
-    min-height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer-section__box {
+    min-height: 64px;
   }
+}
+
+@media (max-width: 650px) {
+  .footer-section__box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    position: relative;
+  }
+}

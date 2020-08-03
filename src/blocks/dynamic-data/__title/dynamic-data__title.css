@@ -1,0 +1,15 @@
+.dynamic-data__title {
+  font-size: 40px;
+}
+
+@media (max-width: 800px) {
+  .dynamic-data__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dynamic-data__title {
+    margin-bottom: 16px;
+  }
+}

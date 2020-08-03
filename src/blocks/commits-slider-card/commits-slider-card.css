@@ -12,9 +12,22 @@
   font-weight: 400;
   font-size: 14px;
   box-sizing: border-box;
-  color: #1A1B22;
+  color: #1a1b22;
   background-color: #fff;
   border-radius: 16px;
-  width: 400px;
-  height: 288px;
+  max-width: 400px;
+  min-height: 288px;
+}
+
+@media (max-width: 800px) {
+  .commits-slider-card {
+    max-width: 336px;
+    min-height: 242px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commits-slider-card {
+    max-width: 95%;
+  }
 }

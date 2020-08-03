@@ -1,0 +1,9 @@
+.search-results__header {
+  margin-bottom: 62px;
+}
+
+@media (max-width: 800px) {
+  .search-results__header {
+    margin-bottom: 30px;
+  }
+}

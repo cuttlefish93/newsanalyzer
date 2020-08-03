@@ -1,3 +1,4 @@
+@import url(./__header/search-results__header.css);
 @import url(./__add-news-btn/search-results__add-news-btn.css);
 
 .search-results {
@@ -6,8 +7,15 @@
   font-weight: 500;
   font-size: 18px;
   box-sizing: border-box;
-  color: #1A1B22;
-  background-color: #F5F6F7;
+  color: #1a1b22;
+  background-color: #f5f6f7;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+@media (max-width: 800px) {
+  .search-results {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }

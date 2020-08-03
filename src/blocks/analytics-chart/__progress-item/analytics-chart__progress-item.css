@@ -1,8 +1,15 @@
 .analytics-chart__progress-item {
   position: relative;
   height: 24px;
+  width: 100%;
 }
 
 .analytics-chart__progress-item + .analytics-chart__progress-item {
-  margin-top: 40px;
+  margin-top: 56px;
+}
+
+@media (max-width: 450px) {
+  .analytics-chart__progress-item + .analytics-chart__progress-item {
+    margin-top: 24px;
+  }
 }
