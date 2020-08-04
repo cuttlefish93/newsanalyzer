@@ -1,0 +1,10 @@
+.commits-slider-card__author-name {
+  font-size: 26px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  .commits-slider-card__author-name {
+    font-size: 20px;
+  }
+}

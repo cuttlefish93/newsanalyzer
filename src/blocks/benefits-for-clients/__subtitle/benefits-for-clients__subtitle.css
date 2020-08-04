@@ -1,0 +1,14 @@
+.benefits-for-clients__subtitle {
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+
+.benefits-for-clients__subtitle:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 450px) {
+  .benefits-for-clients__subtitle {
+    margin-bottom: 0;
+  }
+}

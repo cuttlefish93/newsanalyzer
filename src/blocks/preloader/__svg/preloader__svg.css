@@ -1,0 +1,6 @@
+.preloader__svg {
+  width: 93px;
+  height: 90px;
+  display: inline-block;
+  transform: rotate(180deg);
+}

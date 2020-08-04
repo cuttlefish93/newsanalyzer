@@ -1,0 +1,14 @@
+.footer-section__social-item {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-section__social-item + .footer-section__social-item {
+  margin-left: 28px;
+}
+
+@media (max-width: 650px) {
+  .footer-section__social-item + .footer-section__social-item {
+    margin-left: 28px;
+  }
+}

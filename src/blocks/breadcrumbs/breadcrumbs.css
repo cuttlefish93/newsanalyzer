@@ -1,0 +1,26 @@
+@import url(./__item/breadcrumbs__item.css);
+
+.breadcrumbs {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  color: #1a1b22;
+  background-color: #fff;
+  padding-top: 42px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 450px) {
+  .breadcrumbs {
+    display: none;
+  }
+}

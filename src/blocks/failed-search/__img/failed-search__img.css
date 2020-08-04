@@ -1,0 +1,9 @@
+.failed-search__img {
+  background-image: url(../../../assets/images/not-found-icon.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 40px;
+}

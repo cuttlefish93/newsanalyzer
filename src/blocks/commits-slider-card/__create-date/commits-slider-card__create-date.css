@@ -1,0 +1,10 @@
+.commits-slider-card__create-date {
+  color: #b6bcbf;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .commits-slider-card__create-date {
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,32 @@
+.analytics-chart__svg {
+  height: 24px;
+  fill: #2f71e5;
+}
+
+#mon {
+  width: 15%;
+}
+
+#tue {
+  width: 18%;
+}
+
+#wed {
+  width: 11%;
+}
+
+#thu {
+  width: 39%;
+}
+
+#fri {
+  width: 45%;
+}
+
+#sat {
+  width: 73%;
+}
+
+#sun {
+  width: 34%;
+}

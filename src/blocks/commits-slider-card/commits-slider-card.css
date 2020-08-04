@@ -1,0 +1,33 @@
+@import url(./__link/commits-slider-card__link.css);
+@import url(./__create-date/commits-slider-card__create-date.css);
+@import url(./__author/commits-slider-card__author.css);
+@import url(./__image-box/commits-slider-card__image-box.css);
+@import url(./__img/commits-slider-card__img.css);
+@import url(./__author-name/commits-slider-card__author-name.css);
+@import url(./__commit-text/commits-slider-card__commit-text.css);
+
+.commits-slider-card {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #1a1b22;
+  background-color: #fff;
+  border-radius: 16px;
+  max-width: 400px;
+  min-height: 288px;
+}
+
+@media (max-width: 800px) {
+  .commits-slider-card {
+    max-width: 336px;
+    min-height: 242px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commits-slider-card {
+    max-width: 95%;
+  }
+}

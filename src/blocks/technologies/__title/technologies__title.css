@@ -1,0 +1,28 @@
+.technologies__title {
+  max-width: 344px;
+  margin-right: 180px;
+}
+
+@media (max-width: 1170px) {
+  .technologies__title {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .technologies__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .technologies__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .technologies__title {
+    margin-bottom: 46px;
+  }
+}

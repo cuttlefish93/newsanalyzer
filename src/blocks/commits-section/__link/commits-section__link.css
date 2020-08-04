@@ -1,0 +1,27 @@
+.commits-section__link::after {
+  top: 2px;
+}
+
+@media (max-width: 600px) {
+  .commits-section__link {
+    position: absolute;
+    width: 288px;
+    min-height: 56px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 60px;
+    border: 1px solid #1a1b22;
+    box-sizing: border-box;
+    border-radius: 80px;
+    text-align: center;
+  }
+
+  .commits-section__link::after {
+    display: none;
+  }
+
+  .commits-section__link:hover {
+    background-color: #fff;
+  }
+}

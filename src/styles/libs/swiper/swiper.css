@@ -1,0 +1,99 @@
+/* Redefining swiper default styles */
+
+/* prev & next buttons */
+.commits-slider__btn.swiper-button-prev,
+.commits-slider__btn.swiper-button-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1a1b22;
+  box-shadow: 0px 3px 10px rgba(14, 26, 57, .2);
+  color: #fff;
+  display: block;
+  z-index: 1;
+  padding: 0;
+  border: 2px solid transparent;
+}
+
+.commits-slider__btn.swiper-button-prev {
+  left: 20px;
+}
+
+.commits-slider__btn.swiper-button-next {
+  right: 20px;
+}
+
+.commits-slider__btn.swiper-button-prev:focus,
+.commits-slider__btn.swiper-button-next:focus {
+  outline: none;
+  border: 2px solid rgb(235, 176, 14);
+}
+
+.commits-slider__prev-btn.swiper-button-prev::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 13px;
+  background-image: url(./../../../assets/images/slider-prev-arrow.svg);
+  background-repeat: no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.commits-slider__next-btn.swiper-button-next::after {
+  content: '';
+  width: 8px;
+  height: 13px;
+  position: absolute;
+  background-image: url(./../../../assets/images/slider-next-arrow.svg);
+  background-repeat: no-repeat;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+/* pagination */
+.commits-slider__pagination.swiper-pagination {
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 8px;
+  min-width: 40px;
+}
+
+.commits-slider__pagination-icon.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #d1d2d6;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: 8px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #1a1b22;
+}
+
+/* media styles */
+@media (max-width: 800px) {
+  .commits-slider__btn.swiper-button-prev,
+  .commits-slider__btn.swiper-button-next {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .commits-slider__pagination.swiper-pagination {
+    bottom: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commits-slider__pagination.swiper-pagination {
+    bottom: 120px;
+  }
+}

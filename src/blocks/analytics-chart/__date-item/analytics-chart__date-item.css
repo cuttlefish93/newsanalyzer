@@ -1,0 +1,13 @@
+.analytics-chart__date-item {
+  height: 24px;
+}
+
+.analytics-chart__date-item + .analytics-chart__date-item {
+  margin-top: 56px;
+}
+
+@media (max-width: 450px) {
+  .analytics-chart__date-item + .analytics-chart__date-item {
+    margin-top: 24px;
+  }
+}

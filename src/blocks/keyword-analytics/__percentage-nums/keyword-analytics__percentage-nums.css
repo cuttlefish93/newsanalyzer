@@ -1,0 +1,17 @@
+.keyword-analytics__percentage-nums {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  margin-left: 104px;
+  color: #b6bcbf;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  width: calc(100% - 104px);
+}
+
+@media (max-width: 450px) {
+  .keyword-analytics__percentage-nums {
+    display: none;
+  }
+}
