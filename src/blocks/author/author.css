@@ -1,0 +1,28 @@
+@import url(./__box/author__box.css);
+@import url(./__image-container/author__image-container.css);
+@import url(./__description/author__description.css);
+@import url(./__title/author__title.css);
+@import url(./__subtitle/author__subtitle.css);
+
+.author {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  color: #1a1b22;
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .author {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .author {
+    padding: 30px 0;
+  }
+}

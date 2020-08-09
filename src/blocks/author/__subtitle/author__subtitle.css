@@ -1,0 +1,21 @@
+.author__subtitle {
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+
+.author__subtitle:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .author__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .author__subtitle {
+    margin-bottom: 0;
+    line-height: 22px;
+  }
+}

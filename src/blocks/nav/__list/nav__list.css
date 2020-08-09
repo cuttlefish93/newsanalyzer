@@ -1,0 +1,17 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+@media (max-width: 768px) {
+  .nav__list {
+    min-height: 64px;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav__list {
+    min-height: 56px;
+  }
+}

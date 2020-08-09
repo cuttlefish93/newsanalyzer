@@ -1,0 +1,28 @@
+@import url(./__box/benefits-for-clients__box.css);
+@import url(./__title/benefits-for-clients__title.css);
+@import url(./__subtitle/benefits-for-clients__subtitle.css);
+
+.benefits-for-clients {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #1a1b22;
+  padding-top: 80px;
+  padding-bottom: 94px;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .benefits-for-clients {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-for-clients {
+    padding-top: 22px;
+    padding-bottom: 55px;
+  }
+}

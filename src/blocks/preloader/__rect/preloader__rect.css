@@ -1,0 +1,42 @@
+.preloader__rect {
+  width: 5px;
+  fill: #00008b;
+  animation: one 1s linear infinite, opacity 1s linear infinite;
+}
+
+#two {
+  animation-delay: .2s;
+}
+
+#three {
+  animation-delay: .4s;
+}
+
+#four {
+  animation-delay: .6s;
+}
+
+#five {
+  animation-delay: .8s;
+}
+
+@keyframes one {
+  0% {
+    height: 30px;
+  }
+  50% {
+    height: 90px;
+  }
+  100% {
+    height: 30px;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,10 @@
+.failed-search__title {
+  margin-bottom: 16px;
+  font-size: 26px;
+}
+
+@media (max-width: 450px) {
+  .failed-search__title {
+    font-size: 20px;
+  }
+}

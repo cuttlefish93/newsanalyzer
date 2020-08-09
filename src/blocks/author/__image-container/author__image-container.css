@@ -1,0 +1,18 @@
+.author__image-container {
+  max-width: 464px;
+  max-height: 464px;
+}
+
+@media (max-width: 768px) {
+  .author__image-container {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .author__image-container {
+    margin-bottom: 27px;
+    max-width: 100%;
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.search-section__form-row {
+  height: 64px;
+  border-radius: 100px;
+  position: relative;
+}
+
+.search-section__form-row:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .search-section__form-row {
+    height: 56px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-section__form-row {
+    height: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-section__form-row {
+    height: auto;
+  }
+}

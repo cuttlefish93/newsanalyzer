@@ -1,0 +1,28 @@
+@import url(./__title/search-keyword-data__title.css);
+@import url(./__keyword/search-keyword-data__keyword.css);
+@import url(./__subtitle/search-keyword-data__subtitle.css);
+@import url(./__num/search-keyword-data__num.css);
+
+.search-keyword-data {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  color: #1a1b22;
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .search-keyword-data {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-keyword-data {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+}

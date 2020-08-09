@@ -1,0 +1,4 @@
+.footer-section__nav-link:hover {
+  color: #b6bcbf;
+  transition: .2s linear;
+}

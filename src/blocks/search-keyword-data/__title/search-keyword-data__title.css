@@ -1,0 +1,16 @@
+.search-keyword-data__title {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .search-keyword-data__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-keyword-data__title {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,18 @@
+.commits-slider-card__link {
+  padding: 24px;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .commits-slider-card__link {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .commits-slider-card__link {
+    padding: 16px;
+  }
+}

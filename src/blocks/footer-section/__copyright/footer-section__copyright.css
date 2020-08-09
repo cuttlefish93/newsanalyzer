@@ -1,0 +1,10 @@
+.footer-section__copyright {
+  color: #b6bcbf;
+  font-size: 16px;
+}
+
+@media (max-width: 650px) {
+  .footer-section__copyright {
+    order: 3;
+  }
+}

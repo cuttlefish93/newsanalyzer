@@ -1,0 +1,22 @@
+@import url(./__box/preloader__box.css);
+@import url(./__svg/preloader__svg.css);
+@import url(./__rect/preloader__rect.css);
+@import url(./__state-text/preloader__state-text.css);
+
+.preloader {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f5f6f7;
+}
+
+@media (max-width: 1024px) {
+  .preloader {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,9 @@
+.keyword-analytics__percentage:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keyword-analytics__percentage {
+  width: 25%;
+  text-align: end;
+}

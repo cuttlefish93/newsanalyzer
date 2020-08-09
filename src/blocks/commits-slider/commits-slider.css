@@ -1,0 +1,13 @@
+@import url(./__list/commits-slider__list.css);
+@import url(./__list-item/commits-slider__list-item.css);
+@import url(./__pagination/commits-slider__pagination.css);
+@import url(./__pagination-icon/commits-slider__pagination-icon.css);
+@import url(./__btn/commits-slider__btn.css);
+@import url(./__prev-btn/commits-slider__prev-btn.css);
+@import url(./__next-btn/commits-slider__next-btn.css);
+@import url(./../../styles/libs/swiper/swiper.css);
+
+.commits-slider {
+  width: 100%;
+  padding-left: 10px;
+}

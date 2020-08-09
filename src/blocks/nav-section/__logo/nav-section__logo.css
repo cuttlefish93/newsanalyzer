@@ -1,0 +1,9 @@
+.nav-section__logo {
+  color: #fff;
+}
+
+@media (max-width: 450px) {
+  .nav-section__logo {
+    font-size: 16px;
+  }
+}

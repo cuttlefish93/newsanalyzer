@@ -1,0 +1,20 @@
+.news-card__description {
+  margin-bottom: 18px;
+  overflow: hidden;
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+@media (max-width: 800px) {
+  .news-card__description {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .news-card__description {
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,19 @@
+.author__description {
+  padding-top: 50px;
+  margin-left: 52px;
+  max-width: 600px;
+}
+
+@media (max-width: 1024px) {
+  .author__description {
+    padding-top: 0;
+    margin-left: 32px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .author__description {
+    margin-left: 0;
+  }
+}
