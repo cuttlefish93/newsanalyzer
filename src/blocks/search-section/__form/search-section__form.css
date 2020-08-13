@@ -1,8 +1,7 @@
 .search-section__form {
-  border-radius: 100px;
+  position: relative;
 }
 
 .search-section__form:focus-within {
   outline: none;
-  box-shadow: 48px 9px 265px 195px rgba(190,194,177,.47);
 }

@@ -63,12 +63,11 @@
               Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
             </p>
 
-            <form class="search-section__form" name="search-form">
-              <div class="search-section__form-row">
-                <input type="text" class="input search-section__name-input" placeholder="Введите тему новости" required
-                  minlength="2">
-                <button type="submit" class="button search-section__search-btn">Искать</button>
-              </div>
+            <form class="search-section__form" name="search-form" novalidate>
+              <input type="text" name="search-keyword" id="search-keyword" class="input search-section__name-input"
+                placeholder="Введите тему новости" required>
+              <span id="search-keyword-error" class="error"></span>
+              <button type="submit" class="button search-section__search-btn">Искать</button>
             </form>
 
           </div>
@@ -120,6 +119,23 @@
         </div>
       </section>
 
+      <!-- error response section -->
+      <section class="failed-search error-response">
+        <div class="container">
+          <div class="failed-search__box error-response__box">
+
+            <div class="failed-search__img"></div>
+
+            <h4 class="title failed-search__title error-response__title"></h4>
+
+            <p class="subtitle failed-search__subtitle error-response__subtitle">
+              Кажется что-то пошло не так. Попробуйте повторить попытку.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
       <!-- search results -->
       <section class="search-results">
         <div class="container">
@@ -139,133 +155,6 @@
 
           <!-- news container section -->
           <ul class="list news-list">
-
-            <!-- template for news card -->
-            <li class="news-card">
-              <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
-
-                <img src="./assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
-
-                <div class="news-card__about">
-                  <p class="subtitle news-card__create-date">2 августа, 2019</p>
-
-                  <h4 class="title news-card__name">Национальное достояние – парки</h4>
-
-                  <p class="subtitle news-card__description">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-
-                  <p class="subtitle news-card__source">Лента.ру</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="news-card">
-              <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
-
-                <img src="./assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
-
-                <div class="news-card__about">
-                  <p class="subtitle news-card__create-date">2 августа, 2019</p>
-
-                  <h4 class="title news-card__name">Национальное достояние – парки</h4>
-
-                  <p class="subtitle news-card__description">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-
-                  <p class="subtitle news-card__source">Лента.ру</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="news-card">
-              <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
-
-                <img src="./assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
-
-                <div class="news-card__about">
-                  <p class="subtitle news-card__create-date">2 августа, 2019</p>
-
-                  <h4 class="title news-card__name">Национальное достояние – парки</h4>
-
-                  <p class="subtitle news-card__description">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-
-                  <p class="subtitle news-card__source">Лента.ру</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="news-card">
-              <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
-
-                <img src="./assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
-
-                <div class="news-card__about">
-                  <p class="subtitle news-card__create-date">2 августа, 2019</p>
-
-                  <h4 class="title news-card__name">Национальное достояние – парки</h4>
-
-                  <p class="subtitle news-card__description">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-
-                  <p class="subtitle news-card__source">Лента.ру</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="news-card">
-              <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
-
-                <img src="./assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
-
-                <div class="news-card__about">
-                  <p class="subtitle news-card__create-date">2 августа, 2019</p>
-
-                  <h4 class="title news-card__name">Национальное достояние – парки</h4>
-
-                  <p class="subtitle news-card__description">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-
-                  <p class="subtitle news-card__source">Лента.ру</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="news-card">
-              <a href="https://yandex.ru/" target="_blank" class="link news-card__link">
-
-                <img src="./assets/images/card-img-example.jpg" alt="Обложка новости" class="news-card__img">
-
-                <div class="news-card__about">
-                  <p class="subtitle news-card__create-date">2 августа, 2019</p>
-
-                  <h4 class="title news-card__name">Национальное достояние – парки</h4>
-
-                  <p class="subtitle news-card__description">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-
-                  <p class="subtitle news-card__source">Лента.ру</p>
-                </div>
-              </a>
-            </li>
 
           </ul>
 

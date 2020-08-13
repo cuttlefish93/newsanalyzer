@@ -4,6 +4,7 @@
 @import url(./__subtitle/failed-search__subtitle.css);
 
 .failed-search {
+  display: none;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 400;

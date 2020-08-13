@@ -1,0 +1,10 @@
+.error {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+

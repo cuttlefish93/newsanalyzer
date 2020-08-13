@@ -2,6 +2,7 @@
 @import url(./__add-news-btn/search-results__add-news-btn.css);
 
 .search-results {
+  display: none;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
