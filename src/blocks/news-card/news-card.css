@@ -7,7 +7,7 @@
 @import url(./__source/news-card__source.css);
 
 .news-card {
-  width: 100%;
+  max-width: 100%;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -17,6 +17,7 @@
   background-color: #fff;
   border-radius: 16px;
   transition: .2s linear;
+  display: none;
 }
 
 .news-card:hover {

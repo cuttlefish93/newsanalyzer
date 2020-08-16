@@ -12,8 +12,9 @@ export default class NewsApi {
     return Promise.reject(`Ошибка: ${response.status}`);
   }
 
-  getNews(keyword) {
-    return fetch(`${this.url}/${this.endpoint}?q=${keyword}&from=${dateFrom}&to=${dateTo}&apiKey=${this.headers.authorization}`, {
+  getNews(keyword, createDateFunc, dateInterval) {
+    const date = createDateFunc(dateInterval);
+    return fetch(`${this.url}/${this.endpoint}?q=${keyword}&from=${date.from}&to=${date.to}&apiKey=${this.headers.authorization}`, {
       headers: this.headers
     }).then(response => this.checkData(response));
   }

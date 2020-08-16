@@ -5,3 +5,9 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
+
+/* @media (max-width: 800px) {
+  .news-card__source {
+    bottom: 16px;
+  }
+} */
