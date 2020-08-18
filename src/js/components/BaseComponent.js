@@ -1,13 +1,24 @@
+import { call } from "file-loader";
+
 export default class BaseComponent {
-  constructor(handlers = {}) {
-    this.handlers = handlers;
+  constructor() {
+    this._handlers = [];
   }
 
-  setHandlers(node, event, callback) {
-    node.addEventListener(event, callback);
+  setEvents = (handlersArr) => {
+    this._handlers = handlersArr;
+    this._handlers.forEach(handler => this._addHandler(handler));
   }
 
-  removeHandlers(node, event, callback) {
-    node.removeEventListener(event, callback);
+  _addHandler = ({selector, event, callback}) => {
+    selector.addEventListener(event, callback);
+  }
+
+  _removeHandler = ({selector, event, callback}) => {
+    selector.removeEventListener(event, callback);
+  }
+
+  removeEvents = () => {
+    this._handlers.forEach(handler => this._removeHandler(handler));
   }
 }

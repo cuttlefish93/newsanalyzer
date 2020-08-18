@@ -1,8 +1,20 @@
 .news-card__img {
   height: 272px;
-  max-width: 100%;
+  width: 100%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   display: block;
-  object-fit: cover;
+  object-fit: fill;
+}
+
+@media (max-width: 800px) {
+  .news-card__img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .news-card__img {
+    height: 196px;
+  }
 }

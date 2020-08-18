@@ -1,80 +1,16 @@
 import './analytics.css';
+import * as constants from './../../js/constants/constants';
+import DataStorage from './../../js/modules/DataStorage';
+import Statistics from './../../js/components/Statistics';
 
+
+// ПЕРЕМЕННЫЕ
 const searchKeyword = document.querySelector('.search-keyword-data__keyword');
 const totalResultsNum = document.querySelector('#common-num');
 const keyInTitlesNum = document.querySelector('#num-in-title');
-searchKeyword.textContent = localStorage.getItem('keyword');
+const searchMonth = document.querySelector('.keyword-analytics__month');
 
-const data = JSON.parse(localStorage.getItem('news'));
-// console.log(data);
-
-totalResultsNum.textContent = data.totalResults;
-
-function searchKeyInTitles(dataArr, key) {
-  let counter = 0;
-  const regexp = new RegExp(`${key}`, 'i');
-  console.log(regexp);
-  console.log(data.articles);
-
-  // dataArr.forEach(item => {
-  //   let isMatch = regexp.test(item.title);
-  //   if (isMatch) {
-  //     counter += 1;
-  //   }
-  // })
-  const result = dataArr.reduce((counter, item) => {
-    let isMatch = regexp.test(item.title);
-    if (isMatch) {
-      counter += 1;
-    }
-    return counter;
-  }, 0);
-  console.log(result);
-  return result;
-}
-
-keyInTitlesNum.textContent = searchKeyInTitles(data.articles, localStorage.getItem('keyword'));
-
-function setWeekDay(weekDates, { dayOneNode, dayTwoNode, dayThreeNode, dayFourNode, dayFiveNode, daySixNode, daySevenNode }) {
-  const weekArr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-  // const weekDates = getWeekDate(date);
-
-  dayOneNode.textContent = `${weekDates[1].getDate()}, ${weekArr[weekDates[1].getDay()]}`;
-  dayTwoNode.textContent = `${weekDates[2].getDate()}, ${weekArr[weekDates[2].getDay()]}`;
-  dayThreeNode.textContent = `${weekDates[3].getDate()}, ${weekArr[weekDates[3].getDay()]}`;
-  dayFourNode.textContent = `${weekDates[4].getDate()}, ${weekArr[weekDates[4].getDay()]}`;
-  dayFiveNode.textContent = `${weekDates[5].getDate()}, ${weekArr[weekDates[5].getDay()]}`;
-  daySixNode.textContent = `${weekDates[6].getDate()}, ${weekArr[weekDates[6].getDay()]}`;
-  daySevenNode.textContent = `${weekDates[7].getDate()}, ${weekArr[weekDates[7].getDay()]}`;
-}
-
-function getWeekDate(date) {
-  const newDate = new Date(date);
-
-  const dayOne = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 7);
-  const dayTwo = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 6);
-  const dayThree = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 5);
-  const dayFour = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 4);
-  const dayFive = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 3);
-  const daySix = new Date(newDate.getFullYear(), newDate.getMonth(), newDate.getDate() - 2);
-  const daySeven = newDate;
-  console.log(dayOne.toISOString());
-
-  return {
-    1: dayOne,
-    2: dayTwo,
-    3: dayThree,
-    4: dayFour,
-    5: dayFive,
-    6: daySix,
-    7: daySeven
-  }
-}
-
-const weekDates = getWeekDate(JSON.parse(localStorage.getItem('date')));
-console.log(weekDates);
-
-setWeekDay(weekDates, {
+const daysNodes = {
   dayOneNode: document.querySelector('#dayOne'),
   dayTwoNode: document.querySelector('#dayTwo'),
   dayThreeNode: document.querySelector('#dayThree'),
@@ -82,38 +18,68 @@ setWeekDay(weekDates, {
   dayFiveNode: document.querySelector('#dayFive'),
   daySixNode: document.querySelector('#daySix'),
   daySevenNode: document.querySelector('#daySeven')
-})
-
-const publishedDatesArr = data.articles.reduce((acc, item) => {
-  acc.push(item.publishedAt);
-  return acc;
-}, []);
-
-console.log(publishedDatesArr);
-
-// const filteredPublishedDatesArr = publishedDatesArr.reduce((acc, item) => {
-//   acc.push(new Date(item).toLocaleDateString());
-//   return acc;
-// }, []);
-
-// console.log(filteredPublishedDatesArr);
-
-function changeDateFormat(dateArr) {
-  const arr = dateArr.reduce((acc, item) => {
-    acc.push(new Date(item).toLocaleDateString());
-    return acc;
-  }, [])
-  return arr;
 }
 
-const filteredPublishedDatesArr = changeDateFormat(publishedDatesArr);
-const filteredWeekDays = changeDateFormat(Object.values(weekDates));
-console.log(filteredWeekDays);
-console.log(filteredPublishedDatesArr);
+const svgLinesNodes = {
+  dayOneSvg: document.querySelector('#mon'),
+  dayTwoSvg: document.querySelector('#tue'),
+  dayThreeSvg: document.querySelector('#wed'),
+  dayFourSvg: document.querySelector('#thu'),
+  dayFiveSvg: document.querySelector('#fri'),
+  daySixSvg: document.querySelector('#sat'),
+  daySevenSvg: document.querySelector('#sun')
+}
 
-function compareDates(weekDay, publishedDatesArr) {
-  const num = publishedDatesArr.reduce((acc, item) => {
-    if (item == weekDay) {
+const widthInPercentNums = {
+  numOne: document.querySelector('#mon-width-num'),
+  numTwo: document.querySelector('#tue-width-num'),
+  numThree: document.querySelector('#wed-width-num'),
+  numFour: document.querySelector('#thu-width-num'),
+  numFive: document.querySelector('#fri-width-num'),
+  numSix: document.querySelector('#sat-width-num'),
+  numSeven: document.querySelector('#sun-width-num'),
+}
+
+
+// ИНСТАНСЫ КЛАССОВ
+const dataStorage = new DataStorage();
+const statistics = new Statistics(daysNodes);
+
+
+// ФУНКЦИИ
+
+// функция для расчета кол-ва вхождений ключевого слова в заголовках
+function searchKeyInTitles(dataArr, key) {
+  const regexp = new RegExp(`${key}`, 'i');
+
+  const result = dataArr.reduce((counter, item) => {
+    let isMatch = regexp.test(item.title);
+    if (isMatch) {
+      counter += 1;
+    }
+    return counter;
+  }, 0);
+
+  return result;
+}
+
+// функция для вывода промежутка дат на страницу
+function setWeekDay(dates, days, daysNodeObj) {
+  const weekArr = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+  daysNodeObj.dayOneNode.textContent = `${dates[1]}, ${weekArr[days[1]]}`;
+  daysNodeObj.dayTwoNode.textContent = `${dates[2]}, ${weekArr[days[2]]}`;
+  daysNodeObj.dayThreeNode.textContent = `${dates[3]}, ${weekArr[days[3]]}`;
+  daysNodeObj.dayFourNode.textContent = `${dates[4]}, ${weekArr[days[4]]}`;
+  daysNodeObj.dayFiveNode.textContent = `${dates[5]}, ${weekArr[days[5]]}`;
+  daysNodeObj.daySixNode.textContent = `${dates[6]}, ${weekArr[days[6]]}`;
+  daysNodeObj.daySevenNode.textContent = `${dates[7]}, ${weekArr[days[7]]}`;
+}
+
+// функция для проверки кол-ва вхождений даты в массиве дат опубликованных новостей
+function compareDates(date, datesArr) {
+  const num = datesArr.reduce((acc, item) => {
+    if (item == date) {
       acc += 1;
     }
     return acc;
@@ -122,46 +88,60 @@ function compareDates(weekDay, publishedDatesArr) {
   return num;
 }
 
-const dayOne = compareDates(filteredWeekDays[0], filteredPublishedDatesArr);
-console.log(dayOne);
-const dayTwo = compareDates(filteredWeekDays[1], filteredPublishedDatesArr);
-const dayThree = compareDates(filteredWeekDays[2], filteredPublishedDatesArr);
-const dayFour = compareDates(filteredWeekDays[3], filteredPublishedDatesArr);
-const dayFive = compareDates(filteredWeekDays[4], filteredPublishedDatesArr);
-const daySix = compareDates(filteredWeekDays[7], filteredPublishedDatesArr);
-const daySeven = compareDates(filteredWeekDays[6], filteredPublishedDatesArr);
-
+// функция для получения процента опубликованных новостей за один день от общего кол-ва
 function getPercentNum(totalNum, oneDayNum) {
   const maxPercent = 100;
-  const percent = Math.floor((totalNum * oneDayNum) / maxPercent);
+  const percent = Math.round((totalNum * oneDayNum) / maxPercent);
   return percent;
 }
 
-const dayOnePercent = getPercentNum(data.totalResults, dayOne);
-const dayTwoPercent = getPercentNum(data.totalResults, dayTwo);
-const dayThreePercent = getPercentNum(data.totalResults, dayThree);
-const dayFourPercent = getPercentNum(data.totalResults, dayFour);
-const dayFivePercent = getPercentNum(data.totalResults, dayFive);
-const daySixPercent = getPercentNum(data.totalResults, daySix);
-const daySevenPercent = getPercentNum(data.totalResults, daySeven);
+// функция для вывода на страницу месяца поискового промежутка
+function getMonth(node, monthNum) {
+  const monthArr = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
-console.log(dayOnePercent, dayTwoPercent, dayThreePercent);
+  node.textContent = `(${monthArr[monthNum]})`;
+}
 
-const dayOneSvg = document.querySelector('#mon');
-const dayTwoSvg = document.querySelector('#tue');
-const dayThreeSvg = document.querySelector('#wed');
-const dayFourSvg = document.querySelector('#thu');
-const dayFiveSvg = document.querySelector('#fri');
-const daySixSvg = document.querySelector('#sat');
-const daySevenSvg = document.querySelector('#sun');
 
-dayOneSvg.style.width = `${dayOnePercent}%`;
-dayTwoSvg.style.width = `${dayTwoPercent}%`;
-dayThreeSvg.style.width = `${dayThreePercent}%`;
-dayFourSvg.style.width = `${dayFourPercent}%`;
-dayFiveSvg.style.width = `${dayFivePercent}%`;
-daySixSvg.style.width = `${daySixPercent}%`;
-daySevenSvg.style.width = `${daySevenPercent}%`;
+const newsData = dataStorage.getItem(constants.KEYS_FOR_STORAGE.news);
+const keyword = dataStorage.getItem(constants.KEYS_FOR_STORAGE.key);
+const fullDates = dataStorage.getItem(constants.KEYS_FOR_STORAGE.datesData).fullDates;
+const weekDays = dataStorage.getItem(constants.KEYS_FOR_STORAGE.datesData).days;
+const weekDates = dataStorage.getItem(constants.KEYS_FOR_STORAGE.datesData).dates;
+const month = dataStorage.getItem(constants.KEYS_FOR_STORAGE.datesData).month;
+
+
+searchKeyword.textContent = keyword;
+totalResultsNum.textContent = newsData.totalResults;
+keyInTitlesNum.textContent = searchKeyInTitles(newsData.articles, keyword);
+getMonth(searchMonth, month);
+
+const publishedDatesArr = newsData.articles.reduce((acc, item) => {
+  const regexp = /^\d{4}-\d{2}-\d{2}/g;
+  acc.push(item.publishedAt.match(regexp)[0]);
+  return acc;
+}, []);
+
+statistics.setWeekDay(weekDates, weekDays, setWeekDay);
+statistics.getNewsNumInDay(fullDates, publishedDatesArr, compareDates);
+statistics.getPercentNumInDay(newsData.totalResults, getPercentNum);
+statistics.setDaysLinesWidth(svgLinesNodes);
+statistics.setWidthNums(widthInPercentNums);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,12 +1,23 @@
 export default class DataStorage {
-
-  dataToJSON = (data) => {
+  _dataToJSON = (data) => {
     const dataToJSON = JSON.stringify(data);
     return dataToJSON;
   }
 
-  dataFromJSON = (data) => {
+  _dataFromJSON = (data) => {
     const dataFromJSON = JSON.parse(data);
     return dataFromJSON;
+  }
+
+  clearStorage = () => {
+    localStorage.clear();
+  }
+
+  getItem = (key) => {
+    return this._dataFromJSON(localStorage.getItem(key));
+  }
+
+  setItem = (key, value) => {
+    localStorage.setItem(key, this._dataToJSON(value));
   }
 }

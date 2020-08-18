@@ -1,21 +1,20 @@
 export default class NewsApi {
   constructor(config) {
-    this.url = config.url;
-    this.headers = config.headers;
-    this.endpoint = config.endpoint;
+    this._url = config.url;
+    this._headers = config.headers;
+    this._endpoint = config.endpoint;
   }
 
-  checkData(response) {
+  _checkData(response) {
     if (response.ok) {
       return response.json();
     }
     return Promise.reject(`Ошибка: ${response.status}`);
   }
 
-  getNews(keyword, createDateFunc, dateInterval) {
-    const date = createDateFunc(dateInterval);
-    return fetch(`${this.url}/${this.endpoint}?q=${keyword}&from=${date.from}&to=${date.to}&apiKey=${this.headers.authorization}`, {
-      headers: this.headers
-    }).then(response => this.checkData(response));
+  getNews(keyword, { dateTo, dateFrom }) {
+    return fetch(`${this._url}/${this._endpoint}?q=${keyword}&from=${dateFrom}&to=${dateTo}&apiKey=${this._headers.authorization}`, {
+      headers: this._headers
+    }).then(response => this._checkData(response));
   }
 }

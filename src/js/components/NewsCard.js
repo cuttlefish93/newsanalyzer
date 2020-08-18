@@ -1,31 +1,38 @@
 export default class NewsCard {
   constructor(template, changeDateFunc) {
-    this.template = template;
-    this.changeDateFunc = changeDateFunc;
+    this._template = template;
+    this._changeDateFunc = changeDateFunc;
   }
 
   createCard = ({ source, title, description, urlToNews, urlToImage, publishedDate }) => {
-    this.cloneTemplate = this.template.content.cloneNode(true);
-    this.newsCard = this.cloneTemplate.querySelector('.news-card');
-    this.newsSourceLink = this.newsCard.querySelector('.news-card__link');
-    this.newsImage = this.newsCard.querySelector('.news-card__img');
-    this.newsCreateDate = this.newsCard.querySelector('.news-card__create-date');
-    this.newsTitle = this.newsCard.querySelector('.news-card__name');
-    this.newsDescription = this.newsCard.querySelector('.news-card__description');
-    this.newsCardSourceName = this.newsCard.querySelector('.news-card__source');
-    this.newsCardSourceName.textContent = source;
-    this.newsTitle.textContent = title;
-    this.newsDescription.textContent = description;
-    this.newsSourceLink.setAttribute('href', `${urlToNews}`);
-    this.newsImage.setAttribute('src', `${urlToImage}`);
-    this.newsCreateDate.textContent = this.changeDateFormat(publishedDate);
+    const cloneTemplate = this._template.content.cloneNode(true);
+    this._newsCard = cloneTemplate.querySelector('.news-card');
+    this._newsSourceLink = this._newsCard.querySelector('.news-card__link');
+    this._newsImage = this._newsCard.querySelector('.news-card__img');
+    this._newsCreateDate = this._newsCard.querySelector('.news-card__create-date');
+    this._newsTitle = this._newsCard.querySelector('.news-card__name');
+    this._newsDescription = this._newsCard.querySelector('.news-card__description');
+    this._newsCardSourceName = this._newsCard.querySelector('.news-card__source');
+    this._newsCardSourceName.textContent = source;
+    this._newsTitle.textContent = title;
+    this._newsDescription.textContent = description;
+    this._newsSourceLink.setAttribute('href', `${urlToNews}`);
+    this._newsImage.setAttribute('src', `${urlToImage}`);
+    this._checkImgLoad(this._newsImage);
+    this._newsCreateDate.textContent = this._changeDateFormat(publishedDate);
 
-    return this.newsCard;
+    return this._newsCard;
   }
 
-  changeDateFormat = (date) => {
-    const correctDateFormat = this.changeDateFunc(date);
+  _changeDateFormat = (date) => {
+    const correctDateFormat = this._changeDateFunc(date);
     return correctDateFormat;
+  }
+
+  _checkImgLoad = (img) => {
+    img.onerror = function () {
+      img.setAttribute('src', './assets/images/card-img-example.jpg');
+    }
   }
 }
 

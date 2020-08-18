@@ -1,10 +1,10 @@
 export default class GithubApi {
   constructor(config) {
-    this.url = config.url;
-    this.headers = config.headers;
+    this._url = config.url;
+    this._headers = config.headers;
   }
 
-  checkData(response) {
+  _checkData(response) {
     if (response.ok) {
       return response.json();
     }
@@ -12,8 +12,8 @@ export default class GithubApi {
   }
 
   getCommits({ owner, repo }) {
-    return fetch(`${this.url}/repos/${owner}/${repo}/commits`, {
-      headers: this.headers
-    }).then(response => this.checkData(response));
+    return fetch(`${this._url}/repos/${owner}/${repo}/commits`, {
+      headers: this._headers
+    }).then(response => this._checkData(response));
   }
 }

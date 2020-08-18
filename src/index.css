@@ -1,5 +1,4 @@
 @import '~normalize.css';
-@import url(./styles/libs/icomoon/icomoon.css);
 @import url(./vendor/fonts.css);
 @import url(./blocks/page/page.css);
 @import url(./blocks/list/list.css);

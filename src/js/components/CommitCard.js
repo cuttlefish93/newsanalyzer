@@ -1,30 +1,43 @@
 export default class CommitCard {
   constructor(template, changeDateFunc) {
-    this.template = template;
-    this.changeDateFunc = changeDateFunc;
+    this._template = template;
+    this._changeDateFunc = changeDateFunc;
   }
 
   createCommitCard = ({ commitUrl, commitDate, authorImg, authorName, authorEmail, commitText }) => {
-    const cloneTemplate = this.template.content.cloneNode(true);
-    this.commitCard = cloneTemplate.querySelector('.commits-slider-card');
-    this.commitCardLink = this.commitCard.querySelector('.commits-slider-card__link');
-    this.commitCreateDate = this.commitCard.querySelector('.commits-slider-card__create-date');
-    this.commitAuthorImg = this.commitCard.querySelector('.commits-slider-card__img');
-    this.commitAuthorName = this.commitCard.querySelector('.commits-slider-card__author-name');
-    this.commitAuthorEmail = this.commitCard.querySelector('.commits-slider-card__author-email');
-    this.commitText = this.commitCard.querySelector('.commits-slider-card__commit-text');
-    this.commitCardLink.setAttribute('href', `${commitUrl}`); //возможно потребуется обрезать ссылку для корректного отображения
-    this.commitCreateDate.textContent = this.changeDateFormat(commitDate);
-    this.commitAuthorImg.setAttribute('src', `${authorImg}`); //возможно потребуется обрезать ссылку для корректного отображения
-    this.commitAuthorName.textContent = authorName;
-    this.commitAuthorEmail.textContent = authorEmail;
-    this.commitText.textContent = commitText;
+    const cloneTemplate = this._template.content.cloneNode(true);
+    this._commitCard = cloneTemplate.querySelector('.commits-slider-card');
+    this._commitCardLink = this._commitCard.querySelector('.commits-slider-card__link');
+    this._commitCreateDate = this._commitCard.querySelector('.commits-slider-card__create-date');
+    this._commitAuthorImg = this._commitCard.querySelector('.commits-slider-card__img');
+    this._commitAuthorName = this._commitCard.querySelector('.commits-slider-card__author-name');
+    this._commitAuthorEmail = this._commitCard.querySelector('.commits-slider-card__author-email');
+    this._commitText = this._commitCard.querySelector('.commits-slider-card__commit-text');
+    this._commitCardLink.setAttribute('href', `${commitUrl}`);
+    this._commitCreateDate.textContent = this._changeDateFormat(commitDate);
+    this._commitAuthorImg.setAttribute('src', `${authorImg}`);
+    this._checkImgLoad(this._commitAuthorImg);
+    this._commitAuthorName.textContent = authorName;
+    this._commitAuthorEmail.textContent = this._checkEmail(authorEmail);
+    this._commitText.textContent = commitText;
 
-    return this.commitCard;
+    return this._commitCard;
   }
 
-  changeDateFormat = (date) => {
-    const correctDateFormat = this.changeDateFunc(date);
+  _changeDateFormat = (date) => {
+    const correctDateFormat = this._changeDateFunc(date);
     return correctDateFormat;
+  }
+
+  _checkImgLoad = (img) => {
+    img.onerror = function () {
+      img.setAttribute('src', './assets/images/author-img.png')
+    }
+  }
+
+  _checkEmail(email) {
+    const regexp = /^\d{0,8}\+?/gi;
+    const newEmail = email.replace(regexp, '');
+    return newEmail;
   }
 }

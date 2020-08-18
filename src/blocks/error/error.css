@@ -1,13 +1,10 @@
-@import url(./__text/error__text.css);
-
 .error {
-  display: inline-block;
+  display: block;
   font-size: 14px;
   color: #fff;
   padding-left: 24px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 10px;
+  max-width: 100%;
+  min-height: 32px;
 }
 
 

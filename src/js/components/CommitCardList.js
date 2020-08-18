@@ -1,17 +1,17 @@
 export default class CommitCardList {
   constructor(node) {
-    this.commitContainer = node;
+    this._commitContainer = node;
   }
 
-  addCommitCard = (card) => {
-    this.commitContainer.append(card);
+  _addCommitCard = (card) => {
+    this._commitContainer.append(card);
   }
 
   renderCommitCards = (responseData, createCommitCard) => {
     responseData.forEach((data) => {
-      this.addCommitCard(
+      this._addCommitCard(
         createCommitCard({
-          commitUrl: data.commit.url,
+          commitUrl: data.html_url,
           commitDate: data.commit.committer.date,
           authorImg: data.author ? data.author.avatar_url : './assets/images/author-img.png',
           authorName: data.commit.committer.name,
