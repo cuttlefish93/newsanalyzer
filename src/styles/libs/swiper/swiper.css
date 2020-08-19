@@ -61,6 +61,7 @@
   transform: translateX(-50%);
   height: 8px;
   min-width: 40px;
+  width: 100%;
 }
 
 .commits-slider__pagination-icon.swiper-pagination-bullet {

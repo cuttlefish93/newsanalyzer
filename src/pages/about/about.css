@@ -22,6 +22,8 @@
 @import url(./../../blocks/commits-section/commits-section.css);
 @import url(./../../blocks/commits-slider/commits-slider.css);
 @import url(./../../blocks/commits-slider-card/commits-slider-card.css);
+@import url(./../../blocks/failed-search/failed-search.css);
+@import url(./../../blocks/error-response/error-response.css);
 @import url(./../../blocks/footer/footer.css);
 @import url(./../../blocks/footer-section/footer-section.css);
 

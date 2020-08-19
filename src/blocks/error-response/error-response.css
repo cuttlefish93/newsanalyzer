@@ -1,0 +1,11 @@
+@import url(./__box/error-response__box.css);
+@import url(./__title/error-response__title.css);
+@import url(./__subtitle/error-response__subtitle.css);
+
+.error-response {
+  display: none;
+  background-color: #f5f6f7;
+  color: #1a1b22;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

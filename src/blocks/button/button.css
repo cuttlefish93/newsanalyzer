@@ -1,3 +1,5 @@
+@import url(./_disabled/button_disabled.css);
+
 .button {
   border: none;
   background-color: transparent;

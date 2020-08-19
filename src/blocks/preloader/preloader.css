@@ -4,6 +4,7 @@
 @import url(./__state-text/preloader__state-text.css);
 
 .preloader {
+  display: none;
   font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 400;

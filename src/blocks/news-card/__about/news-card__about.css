@@ -1,10 +1,22 @@
 .news-card__about {
   padding: 20px 24px 24px;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 272px);
+  box-sizing: border-box;
 }
 
 @media (max-width: 800px) {
   .news-card__about {
     padding: 16px;
+    height: calc(100% - 150px);
+  }
+}
+
+@media (max-width: 500px) {
+  .news-card__about {
+    height: calc(100% - 196px);
   }
 }
